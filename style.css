@@ -1,0 +1,18 @@
+.borderis {
+	border: dotted 2px background;
+	padding: 20px;
+	margin: 0px;
+	font-family: 'Barlow Condensed', sans-serif;
+}
+.fa-facebook-f{
+	font-size: 100px;
+}
+.paveikslelis {
+	float:left;
+	width: 300px;
+	height: 300px;
+}
+.canvasDisplay{
+	border: 1px solid black;
+	display: none;
+}
