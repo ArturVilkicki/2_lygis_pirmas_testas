@@ -1,10 +1,12 @@
 <?php
 class Masyvas {
 	 public $masyvas = [];
-	for(i = 0; i<=mt_rand(2,10);i++){
-		$masyvas[] = mt_rand(0,50);
+	 public $dydis = rand(2,10);
+	 public $elementai = rand(0,50);
+	for($i = 0; $i<=$dydis;$i++){
+		$masyvas[] = $elementai;
 	}
-	//print_r($masyvas);
+	
 
 
 
