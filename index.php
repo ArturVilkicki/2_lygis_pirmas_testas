@@ -21,7 +21,10 @@
 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 	<!-- 3 uzduotis -->
-	<a href="http://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i><hr>
+	<div align="center">
+		<a href="http://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a><br />
+	</div>
+	
 	<!-- 4 uzduotis -->
 	<div class="container-fluid">
 		<div class="row">
@@ -42,14 +45,23 @@
 		</div>	
 	</div>
 	<!-- 5 uzduotis -->	
-	<p id="p1"></p>
-	<body onload="randomGeneravimas()">
-	<button onclick="sumavimas()" onmouseenter="mygtukoSpalva(this)" onmouseleave="atstatomSpalva(this)">Sumuoti</button>
-	<button onmouseenter="mygtukoSpalva(this)" onmouseleave="atstatomSpalva(this)">Maziausias skirtumas</button>
+	<div>
+		<p id="p1"></p>
+	</div>
+	<div>
+		<body onload="randomGeneravimas()">
+	</div>
+	<div>
+		<button onclick="sumavimas()" onmouseenter="mygtukoSpalva(this)" onmouseleave="atstatomSpalva(this)">Sumuoti</button>
+	</div>
+	<div>
+		<button onmouseenter="mygtukoSpalva(this)" onmouseleave="atstatomSpalva(this)">Maziausias skirtumas</button>
+	</div>
+	
 	<!-- 6 uzduotis -->	
 	<div style="margin-left: 100px;">
 		<form>
-			<input type="text" id="forma" onkeypress="apskritimoBraizymas()">
+			<input type="text" id="forma" onkeyup="apskritimoBraizymas()">
 		</form>
 	</div>
 	
@@ -63,7 +75,10 @@
 		<canvas id="bar1" width="400" height="400"></canvas>
 	</div>
 	<!-- 9 uzduotis -->
-	<button id="mygtukas">Uzkrauti php</button>
+	<div>
+		<button id="mygtukas">Uzkrauti php</button>
+	</div>
+	
 	<script>
 		function randomGeneravimas(){
 			var masyvas = new Array(10);
@@ -128,13 +143,15 @@
 		function apskritimoBraizymas(){
 			document.getElementById("myCanvas").style.display = "block";
 			var spindulys = document.getElementById("forma").value;
+			console.log(spindulys);
 			var word = document.forms[0].elements[0].value;
 			var c = document.getElementById("myCanvas");
 			var ctx = c.getContext("2d");
 			ctx.beginPath();
-			ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-			//ctx.arc(100, 75, spindulys, 0, 2 * Math.PI);
+			//ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+			ctx.arc(100, 75, spindulys, 0, 2 * Math.PI);
 			ctx.stroke();
+
 			
 		}
 		var masyvas = new Array(10);
